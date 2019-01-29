@@ -11,6 +11,11 @@ body {
   line-height: 1.4;
 }
 
+/* HOME BG LOAD TRANSITION */
+@keyframes bgHomeLoad {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 /* BACKGROUND */
 .backdropHome {
@@ -21,13 +26,34 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation-name: bgLoad forwards;
+  -webkit-animation: bgHomeLoad 3s normal forwards;
+  -moz-animation:    bgHomeLoad 3s normal forwards;
+  -o-animation:      bgHomeLoad 3s normal forwards;
 }
+
 
 .backdropDoc {
   position:absolute;
   width:100%;
   height:auto;
   background-color:#eaf0f2;
+  z-index:-100;
+}
+
+/* DOC BG LOAD TRANSITION */
+@keyframes bgLoad {
+    0% {background-color: rgb(0,0,0);}
+    10% {background-color: rgb(0,0,0);}
+    100% {background-color: #eaf0f2;}
+}
+
+#bgLoad {
+    animation-name: bgLoad forwards;
+    -webkit-animation: bgLoad 1s normal forwards;
+    -moz-animation:    bgLoad 1s normal forwards;
+    -o-animation:      bgLoad 1s normal forwards;
+    z-index:-5000;
 }
 
 /* RULE */
@@ -171,7 +197,7 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #e8ebf0;
+  background: transparent;
 }
 
 /* Handle */
@@ -183,6 +209,7 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #1e1e1f;
 }
+
 
 /* DESKTOP */
 @media (min-width:768px){
