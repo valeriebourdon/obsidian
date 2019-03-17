@@ -37,7 +37,7 @@ body {
   position:absolute;
   width:100%;
   height:auto;
-  background-color:#eaf0f2;
+  background-color:#000000;
   z-index:-100;
 }
 
@@ -185,7 +185,7 @@ a:hover {
 }
 
 ::selection {
-  color:#da1622;
+  color:#F36B42;
 
 }
 
