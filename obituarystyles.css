@@ -12,6 +12,12 @@ body {
   letter-spacing:1px;
 }
 
+/* TEST */
+@keyframes scroller {
+    0% {transform: translate(0px, 0px);}
+    100% {transform: translate(0px, -1500px);}
+}
+
 .grid-container {
   margin: auto;
   width: 90%;
@@ -19,6 +25,11 @@ body {
   grid-gap: 2%;
   grid-template-columns: auto auto auto auto auto;
   padding: 1%;
+  animation-name: scroller;
+  animation-duration: 100s forwards;
+  -webkit-animation: scroller 100s forwards;
+  -moz-animation:    scroller 100s forwards;
+  -o-animation:      scroller 100s forwards;
 }
 
 .grid-item {
