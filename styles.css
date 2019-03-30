@@ -82,6 +82,7 @@ video {
 
 /* SIDEBAR */
 .menuHome, .menuDoc {
+  z-index: 100000;
   position: relative;
   font-family: 'IBM Plex Mono', monospace;
   margin:0;
@@ -106,6 +107,7 @@ video {
 }
 
 .creditsHome, .creditsDoc {
+  z-index: 100000;
   display: block;
   position: fixed;
   font-family: 'IBM Plex Mono', monospace;
